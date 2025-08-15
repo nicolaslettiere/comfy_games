@@ -1,7 +1,7 @@
 [
   {
     "title": "8 Puzzle",
-    "image": "../assets/8_puzzle.png",
+    "image": "assets/8_puzzle.png",
     "url": "https://nicolaslettiere.github.io/8-Puzzle/"
   }
 ]

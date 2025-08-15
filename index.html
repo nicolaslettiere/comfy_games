@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Catálogo de Juegos</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
   <h1>Catálogo de Juegos</h1>
@@ -11,14 +11,14 @@
 
   <script>
     // Cargar el JSON y generar catálogo
-    fetch('games.json')
+    fetch('src/games.json')
       .then(response => response.json())
       .then(juegos => {
         const catalogo = document.getElementById('catalogo');
 
         juegos.forEach(juego => {
           const link = document.createElement('a');
-          link.href = `game.html?url=${encodeURIComponent(juego.url)}`;
+          link.href = `src/game.html?url=${encodeURIComponent(juego.url)}`;
 
           const img = document.createElement('img');
           img.src = juego.image;
