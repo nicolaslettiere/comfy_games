@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Juegos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Catálogo de Juegos</h1>
+  <div id="catalogo" class="catalogo"></div>
+
+  <script>
+    // Cargar el JSON y generar catálogo
+    fetch('games.json')
+      .then(response => response.json())
+      .then(juegos => {
+        const catalogo = document.getElementById('catalogo');
+
+        juegos.forEach(juego => {
+          const link = document.createElement('a');
+          link.href = `game.html?url=${encodeURIComponent(juego.url)}`;
+
+          const img = document.createElement('img');
+          img.src = juego.image;
+          img.alt = juego.title;
+
+          const p = document.createElement('p');
+          p.textContent = juego.title;
+
+          link.appendChild(img);
+          link.appendChild(p);
+          catalogo.appendChild(link);
+        });
+      })
+      .catch(error => console.error('Error cargando juegos:', error));
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.catalogo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.catalogo a {
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.catalogo a:hover {
+  transform: scale(1.05);
+}
+
+.catalogo img {
+  width: 100%;
+  display: block;
+}
+
+.catalogo p {
+  margin: 0;
+  padding: 10px;
+}

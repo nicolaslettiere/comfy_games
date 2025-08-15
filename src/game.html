@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .ads {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      height: 90px; /* Alto del banner */
+    }
+    iframe {
+      flex: 1;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Aquí iría el código de AdSense o banner -->
+  <div class="ads">
+    [Aquí aparecería el anuncio]
+  </div>
+
+  <iframe id="gameFrame"></iframe>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const gameUrl = params.get('url');
+    if (gameUrl) {
+      document.getElementById('gameFrame').src = gameUrl;
+    }
+  </script>
+</body>
+</html>
