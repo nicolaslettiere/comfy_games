@@ -3,5 +3,10 @@
     "title": "8 Puzzle",
     "image": "assets/8_puzzle.png",
     "url": "https://nicolaslettiere.github.io/8-Puzzle/"
+  },
+  {
+    "title": "Color Sorter",
+    "image": "assets/color_sorter.png",
+    "url": "https://nicolaslettiere.github.io/color_sorter/"
   }
 ]
